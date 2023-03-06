@@ -8,7 +8,8 @@ import styles from './ContactsBook.module.css'
 
 import {fetchAllContacts} from "../../redux/contacts/contacts-operations"
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const ContactsBook = () => {
   const dispatch = useDispatch();
