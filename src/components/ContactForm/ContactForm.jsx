@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './ContactForm.module.css';
 
+import { fetchAddContact } from 'redux/contacts/contacts-operations';
+
 import { getAllContacts } from 'redux/contacts/contacts-selectors';
-import { addContact } from 'redux/contacts/contacts-slice';
+// import { addContact } from 'redux/contacts/contacts-slice';
 import { nanoid } from 'nanoid';
 
 const ContactForm = () => {
@@ -45,7 +47,7 @@ const ContactForm = () => {
 
     checkContact
       ? alert(`${name} is already in contacts`)
-      : dispatch(addContact(contact)) && reset();
+      : dispatch(fetchAddContact(contact)) && reset();
   };
 
   const reset = () => {
