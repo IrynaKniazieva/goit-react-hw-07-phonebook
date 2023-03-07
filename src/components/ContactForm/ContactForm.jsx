@@ -7,7 +7,7 @@ import { fetchAddContact } from 'redux/contacts/contacts-operations';
 
 import { getAllContacts } from 'redux/contacts/contacts-selectors';
 // import { addContact } from 'redux/contacts/contacts-slice';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -38,7 +38,7 @@ const ContactForm = () => {
     const contact = {
       name,
       number,
-      id: nanoid(),
+      // id: nanoid(),
     };
 
  

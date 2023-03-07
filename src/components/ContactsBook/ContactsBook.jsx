@@ -1,24 +1,20 @@
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 
-import styles from './ContactsBook.module.css'
+import { fetchAllContacts } from '../../redux/contacts/contacts-operations';
 
-import {fetchAllContacts} from "../../redux/contacts/contacts-operations"
-
-import { useDispatch } from 'react-redux';
-// import { useSelector } from 'react-redux';
+import styles from './ContactsBook.module.css';
 
 const ContactsBook = () => {
   const dispatch = useDispatch();
-  // const isLoading = useSelector();
-  // const error = useSelector(); 
 
   useEffect(() => {
     dispatch(fetchAllContacts());
-  },[dispatch]);
+  }, [dispatch]);
 
   return (
     <div className={styles.sectionContacts}>
